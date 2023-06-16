@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvitationViewController" customModule="EventSharing" customModuleProvider="target">
+            <connections>
+                <outlet property="noInvitation" destination="EDc-Hm-qBT" id="sRu-dV-g90"/>
+                <outlet property="segmentationController" destination="qD8-8p-fKA" id="AtV-N2-dyH"/>
+                <outlet property="tableView" destination="nmL-dH-EJC" id="OyJ-gR-kpy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qD8-8p-fKA">
+                    <rect key="frame" x="10" y="74" width="373" height="32"/>
+                    <segments>
+                        <segment title="Recieved"/>
+                        <segment title="Done"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="systemBlueColor"/>
+                    <connections>
+                        <action selector="switchToRecieved:" destination="-1" eventType="valueChanged" id="hvY-zp-Pux"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nmL-dH-EJC">
+                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <color key="backgroundColor" name="Background"/>
+                </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-Hm-qBT">
+                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No invitation present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-Cm-Erm">
+                            <rect key="frame" x="107.33333333333333" y="340.66666666666669" width="178.33333333333337" height="21.666666666666686"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="D5i-Cm-Erm" firstAttribute="centerY" secondItem="EDc-Hm-qBT" secondAttribute="centerY" id="0aC-4D-yLt"/>
+                        <constraint firstItem="D5i-Cm-Erm" firstAttribute="centerX" secondItem="EDc-Hm-qBT" secondAttribute="centerX" id="jZb-BS-jpQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="qD8-8p-fKA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Ca-J3-yIn"/>
+                <constraint firstItem="qD8-8p-fKA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="6Hc-Y2-FZ5"/>
+                <constraint firstItem="EDc-Hm-qBT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7mR-XT-R9S"/>
+                <constraint firstItem="qD8-8p-fKA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Hpf-aI-CQm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EDc-Hm-qBT" secondAttribute="bottom" id="RMo-sB-iza"/>
+                <constraint firstItem="nmL-dH-EJC" firstAttribute="top" secondItem="qD8-8p-fKA" secondAttribute="bottom" constant="10" id="ZLd-xh-ARD"/>
+                <constraint firstItem="EDc-Hm-qBT" firstAttribute="top" secondItem="qD8-8p-fKA" secondAttribute="bottom" constant="10" id="gEl-uB-d4h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EDc-Hm-qBT" secondAttribute="trailing" id="hbA-B2-B30"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qD8-8p-fKA" secondAttribute="trailing" constant="10" id="j1Z-4D-Jbl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nmL-dH-EJC" secondAttribute="bottom" id="mUZ-F2-a0I"/>
+                <constraint firstItem="nmL-dH-EJC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="toC-SD-2Vw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nmL-dH-EJC" secondAttribute="trailing" id="wzR-lZ-Gst"/>
+            </constraints>
+            <point key="canvasLocation" x="9.9236641221374047" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.84799998998641968" green="0.84799998998641968" blue="0.84799998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

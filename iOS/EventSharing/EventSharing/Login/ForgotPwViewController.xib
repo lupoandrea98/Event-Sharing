@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgotPwViewController" customModule="EventSharing" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="crP-2e-2c1" id="Qte-RD-aNq"/>
+                <outlet property="emailField" destination="N1v-JH-QLW" id="fgd-wF-ALf"/>
+                <outlet property="sendButton" destination="nyL-2q-C8l" id="vMQ-m7-hIo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crP-2e-2c1">
+                    <rect key="frame" x="40" y="362" width="313" height="130"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1v-JH-QLW" customClass="CustomTextField" customModule="EventSharing" customModuleProvider="target">
+                            <rect key="frame" x="15" y="15" width="283" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="MRi-dy-Lpt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyL-2q-C8l">
+                            <rect key="frame" x="15" y="70" width="283" height="45"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Send email">
+                                <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="sendAction:" destination="-1" eventType="touchUpInside" id="ciR-IN-us4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="N1v-JH-QLW" secondAttribute="trailing" constant="15" id="50c-Ty-Mph"/>
+                        <constraint firstItem="N1v-JH-QLW" firstAttribute="leading" secondItem="crP-2e-2c1" secondAttribute="leading" constant="15" id="NvB-ZL-blc"/>
+                        <constraint firstItem="nyL-2q-C8l" firstAttribute="leading" secondItem="N1v-JH-QLW" secondAttribute="leading" id="UsK-qj-L2q"/>
+                        <constraint firstItem="N1v-JH-QLW" firstAttribute="top" secondItem="crP-2e-2c1" secondAttribute="top" constant="15" id="WAY-nz-zWY"/>
+                        <constraint firstItem="nyL-2q-C8l" firstAttribute="height" secondItem="N1v-JH-QLW" secondAttribute="height" id="dse-d2-mcE"/>
+                        <constraint firstItem="nyL-2q-C8l" firstAttribute="top" secondItem="N1v-JH-QLW" secondAttribute="bottom" constant="10" id="kps-ct-gLA"/>
+                        <constraint firstAttribute="bottom" secondItem="nyL-2q-C8l" secondAttribute="bottom" constant="15" id="tYq-bv-dOt"/>
+                        <constraint firstItem="nyL-2q-C8l" firstAttribute="trailing" secondItem="N1v-JH-QLW" secondAttribute="trailing" id="z7L-n9-45m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="crP-2e-2c1" secondAttribute="trailing" constant="40" id="M68-4a-rdO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="crP-2e-2c1" secondAttribute="bottom" constant="326" id="jQt-d0-u8e"/>
+                <constraint firstItem="crP-2e-2c1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="jcr-Fv-aWA"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="N1v-JH-QLW">
+            <size key="intrinsicContentSize" width="82.666666666666671" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.84799998998641968" green="0.84799998998641968" blue="0.84799998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
