@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="invitationCell" rowHeight="174" id="KGk-i7-Jjw" customClass="InvitationTableViewCell" customModule="EventSharing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="539" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="539" height="174"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iK8-ZL-TJo">
+                        <rect key="frame" x="20" y="20" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="0aM-Hd-IlJ"/>
+                            <constraint firstAttribute="height" constant="100" id="8sq-iJ-x1a"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username invited you to attend an event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWq-eX-jBq">
+                        <rect key="frame" x="145" y="20" width="374" height="100"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accepted" translatesAutoresizingMaskIntoConstraints="NO" id="NCE-Hy-tyh">
+                        <rect key="frame" x="0.0" y="0.0" width="539" height="140"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" name="Background"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NCE-Hy-tyh" secondAttribute="bottom" id="6OW-KD-XVf"/>
+                    <constraint firstItem="iK8-ZL-TJo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="8o2-QH-uZD"/>
+                    <constraint firstItem="iK8-ZL-TJo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dre-QQ-aOA"/>
+                    <constraint firstItem="GWq-eX-jBq" firstAttribute="bottom" secondItem="iK8-ZL-TJo" secondAttribute="bottom" id="E5k-gF-aOu"/>
+                    <constraint firstItem="NCE-Hy-tyh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PW5-q7-w4D"/>
+                    <constraint firstItem="iK8-ZL-TJo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="YOl-Xt-2VA"/>
+                    <constraint firstItem="GWq-eX-jBq" firstAttribute="leading" secondItem="iK8-ZL-TJo" secondAttribute="trailing" constant="25" id="hZL-PO-O2U"/>
+                    <constraint firstAttribute="trailing" secondItem="GWq-eX-jBq" secondAttribute="trailing" constant="20" id="jeD-Xp-qfO"/>
+                    <constraint firstAttribute="trailing" secondItem="NCE-Hy-tyh" secondAttribute="trailing" id="mfp-mf-3HR"/>
+                    <constraint firstItem="GWq-eX-jBq" firstAttribute="centerY" secondItem="iK8-ZL-TJo" secondAttribute="centerY" id="s6E-m4-QUG"/>
+                    <constraint firstAttribute="bottom" secondItem="iK8-ZL-TJo" secondAttribute="bottom" constant="20" id="seR-gn-plA"/>
+                    <constraint firstItem="NCE-Hy-tyh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zkN-Yr-tQE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accepted" destination="NCE-Hy-tyh" id="tfL-ia-ke1"/>
+                <outlet property="cellDescription" destination="GWq-eX-jBq" id="CIT-yV-4W5"/>
+                <outlet property="userImage" destination="iK8-ZL-TJo" id="LYm-3q-lPl"/>
+            </connections>
+            <point key="canvasLocation" x="296.94656488549617" y="-5.6338028169014089"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Accepted" width="350" height="200"/>
+        <namedColor name="Background">
+            <color red="0.84799998998641968" green="0.84799998998641968" blue="0.84799998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
